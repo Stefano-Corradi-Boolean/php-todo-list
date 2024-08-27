@@ -1,0 +1,17 @@
+body{
+  background-color:cadetblue;
+  color: white;
+}
+
+.sc-container{
+  max-width: 60%;
+  margin: 0 auto;
+}
+
+.done{
+  text-decoration:line-through;
+}
+
+.list-group li{
+  cursor: pointer;
+}

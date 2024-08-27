@@ -1,0 +1,32 @@
+[
+  {
+    "text": "HTML",
+    "description": "HTML - Lorem ipsum dolor sit amet consectetur adipisicing elit. Minima laudantium nam commodi. Rem pariatur architecto fugit, nam unde nihil, placeat dolor laudantium hic dolorum porro vitae aspernatur, beatae distinctio tempore?",
+    "done": false
+  },
+  {
+    "text": "Responsive design",
+    "description": "Responsive design - Lorem ipsum dolor sit amet consectetur adipisicing elit. Minima laudantium nam commodi. Rem pariatur architecto fugit, nam unde nihil, placeat dolor laudantium hic dolorum porro vitae aspernatur, beatae distinctio tempore?",
+    "done": false
+  },
+  {
+    "text": "PHP",
+    "description": "PHP - Lorem ipsum dolor sit amet consectetur adipisicing elit. Minima laudantium nam commodi. Rem pariatur architecto fugit, nam unde nihil, placeat dolor laudantium hic dolorum porro vitae aspernatur, beatae distinctio tempore?",
+    "done": false
+  },
+  {
+    "text": "VueJs",
+    "description": "VueJs - Lorem ipsum dolor sit amet consectetur adipisicing elit. Minima laudantium nam commodi. Rem pariatur architecto fugit, nam unde nihil, placeat dolor laudantium hic dolorum porro vitae aspernatur, beatae distinctio tempore?",
+    "done": true
+  },
+  {
+    "text": "CSS",
+    "description": "CSS - Lorem ipsum dolor sit amet consectetur adipisicing elit. Minima laudantium nam commodi. Rem pariatur architecto fugit, nam unde nihil, placeat dolor laudantium hic dolorum porro vitae aspernatur, beatae distinctio tempore?",
+    "done": true
+  },
+  {
+    "text": "Ripassare",
+    "description": "Sempre!!!",
+    "done": false
+  }
+]

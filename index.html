@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <!-- Bootstrap  -->
+  <link rel='stylesheet' href='https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.2.3/css/bootstrap.css'
+    integrity='sha512-bR79Bg78Wmn33N5nvkEyg66hNg+xF/Q8NA8YABbj+4sBngYhv9P8eum19hdjYcY7vXk/vRkhM3v/ZndtgEXRWw=='
+    crossorigin='anonymous' />
+
+  <!-- FontAwesome  -->
+  <link rel='stylesheet' href='https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.1/css/all.css'
+    integrity='sha512-FA9cIbtlP61W0PRtX36P6CGRy0vZs0C2Uw26Q1cMmj3xwhftftymr0sj8/YeezDnRwL9wtWw8ZwtCiTDXlXGjQ=='
+    crossorigin='anonymous' />
+
+  <!-- Axios  -->
+  <script src='https://cdnjs.cloudflare.com/ajax/libs/axios/1.1.3/axios.js'
+    integrity='sha512-xjzDqCmpabFznyCZ92vM1F0gg8ExgSukopZQOCcVbObLyJSmZAkaB9wzOCeSClearljJcjRh67cGDp2uv4diLg=='
+    crossorigin='anonymous'></script>
+
+  <!-- Vue  -->
+  <script src="https://unpkg.com/vue@3/dist/vue.global.js"></script>
+
+  <!-- Custom CSS  -->
+  <link rel="stylesheet" href="style.css">
+
+  <title>Todo list</title>
+</head>
+
+<body>
+
+  <div id="app" class="sc-container">
+
+    <div class="container-fluid my-5">
+      <h1 class="text-center"> {{ title }} </h1>
+
+
+      <div class="bg-white text-dark rounded-1 p-3">
+
+        <ul class="list-group">
+
+          <li
+            v-for="(item, index) in list"
+            :key="index"
+            class="list-group-item d-flex justify-content-between"
+            :class="{'done': item.done}"
+            @click="toggleDone(index)"
+          >
+            {{ item.text }}
+            <div>
+              <button
+                class="btn btn-danger  me-3"
+                @click.stop="deleteTask(index)"
+                v-if="item.done"
+              >
+                <i class="fa-solid fa-trash-can"></i>
+              </button>
+              <a
+                @click.stop=""
+                class="btn btn-warning"
+                :href="`task-detail.php?index=${index}`"
+              >
+                <i class="fa-regular fa-eye"></i>
+              </a>
+            </div>
+          </li>
+
+
+        </ul>
+
+        <div class="input-group my-3">
+          <input
+            v-model.trim="newTask.title"
+            class="form-control"
+            placeholder="Nuovo task"
+            type="text"
+          >
+          <textarea
+            v-model.trim="newTask.description"
+            class="form-control"
+            placeholder="Descrizione"></textarea
+          >
+          <button
+            @click="addTask"
+            class="btn btn-outline-danger"
+            type="button"
+          >Invia</button>
+        </div>
+
+      </div>
+
+    </div>
+
+
+
+  </div>
+
+  <script src="script.js"></script>
+
+</body>
+
+</html>
